@@ -4,6 +4,7 @@ import * as SplashScreen from "expo-splash-screen";
 
 import AllPlaces from "./screens/AllPlaces";
 import AddPlace from "./screens/Addplace";
+import PlaceDetails from "./screens/PlaceDetails";
 import Map from "./screens/Map";
 
 import { NavigationContainer } from "@react-navigation/native";
@@ -71,6 +72,13 @@ export default function App() {
             }}
           />
           <Stack.Screen name="Map" component={Map} />
+          <Stack.Screen
+            name="PlaceDetails"
+            component={PlaceDetails}
+            options={{
+              title: "Loading spot data...",
+            }}
+          />
         </Stack.Navigator>
       </NavigationContainer>
     </>
